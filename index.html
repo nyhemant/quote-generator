@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="themeToggle" aria-label="Toggle dark mode">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Daily Quote Generator</h1>
+            <p>Find inspiration in every word</p>
+        </header>
+
+        <main class="quote-card">
+            <div class="quote-content">
+                <blockquote id="quote-text">
+                    "The only way to do great work is to love what you do."
+                </blockquote>
+                <cite id="quote-author">— Steve Jobs</cite>
+            </div>
+            
+            <div class="quote-actions">
+                <button id="newQuoteBtn" class="btn-primary">
+                    <span>Generate New Quote</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 4v6h6M23 20v-6h-6M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+                    </svg>
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by OpenClaw</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
