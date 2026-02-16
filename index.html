@@ -8,30 +8,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="theme-toggle">
-        <button id="themeToggle" aria-label="Toggle dark mode">
-            <span class="sun">☀️</span>
-            <span class="moon">🌙</span>
-        </button>
+    <div class="controls">
+        <div class="theme-toggle">
+            <button id="themeToggle" aria-label="Toggle dark mode">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </button>
+        </div>
+        
+        <div class="mode-toggle">
+            <div class="toggle-container">
+                <button id="modeToggle" class="mode-btn" aria-label="Toggle between quotes and jokes">
+                    <span class="mode-indicator quotes-mode">📚</span>
+                    <span class="mode-indicator jokes-mode">😂</span>
+                </button>
+                <div class="mode-labels">
+                    <span class="mode-label">Quotes</span>
+                    <span class="mode-label">Jokes</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container">
         <header>
-            <h1>Daily Quote Generator</h1>
-            <p>Find inspiration in every word</p>
+            <h1 id="appTitle">Daily Quote Generator</h1>
+            <p id="appSubtitle">Find inspiration in every word</p>
         </header>
 
-        <main class="quote-card">
-            <div class="quote-content">
-                <blockquote id="quote-text">
-                    "The only way to do great work is to love what you do."
-                </blockquote>
-                <cite id="quote-author">— Steve Jobs</cite>
+        <main class="content-card">
+            <!-- Quote Mode Content -->
+            <div id="quote-mode" class="mode-content">
+                <div class="quote-content">
+                    <blockquote id="quote-text">
+                        "The only way to do great work is to love what you do."
+                    </blockquote>
+                    <div class="quote-attribution">
+                        <cite id="quote-author">— Steve Jobs</cite>
+                        <div id="quote-source" class="quote-source"></div>
+                    </div>
+                </div>
             </div>
             
-            <div class="quote-actions">
-                <button id="newQuoteBtn" class="btn-primary">
-                    <span>Generate New Quote</span>
+            <!-- Jokes Mode Content -->
+            <div id="jokes-mode" class="mode-content hidden">
+                <div class="jokes-content">
+                    <div id="jokes-list" class="jokes-list">
+                        <!-- Jokes will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-actions">
+                <button id="generateBtn" class="btn-primary">
+                    <span id="btnText">Generate New Quote</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M1 4v6h6M23 20v-6h-6M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
                     </svg>
